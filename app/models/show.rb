@@ -7,4 +7,8 @@ class Show < ActiveRecord::Base
     self.network = Network.new(attr)
   end
 
+  def actors_list
+    self.actors.map{|i| i.full_name}
+  end
+
 end
