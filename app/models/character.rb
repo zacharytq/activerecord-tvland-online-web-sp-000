@@ -6,6 +6,8 @@ class Character < ActiveRecord::Base
     self.name + " always says: " + self.catchphrase
   end
 
-  def build_show({})
-    self.artist
+  def build_show(attr)
+    self.artist = Show.new(attr)
+    self
+  end
 end
