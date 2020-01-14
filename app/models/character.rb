@@ -7,7 +7,8 @@ class Character < ActiveRecord::Base
   end
 
   def build_show(attr)
-    self.artist = Show.new(attr)
-    self
+    self.show = Show.new(attr)
+    self.show
   end
+
 end
